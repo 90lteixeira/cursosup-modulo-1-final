@@ -23,9 +23,9 @@ class Fila {
 
 	_getJobs = function () {
 		return this.jobs; 
-	};  
-
-    _addJob = function (job) {
+	};
+	
+	_addJob = function (job) {
  		return this.jobs.push(job); 
 	};
 
