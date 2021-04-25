@@ -1,0 +1,42 @@
+## Desafio 01 - Javascript
+
+Nesse desafio deverá ser feito uma fila de processamento somente com javascript e sem bibliotecas externas
+
+---
+
+A fila deverá ter os seguintes métodos:
+- addJob
+- removeJob
+- removeAllJobs
+- getJobs
+
+Como ela deverá se comportar:
+- A classe da fila deverá receber a função `myWorker` como parametro no construtor e todo job processado deverá ser executado pelo myWorker
+- Ao adicionar um item na fila com addJob deverá começar a processar a fila
+- `addJob`
+  -  recebe um job como parametro e começa a processar a fila
+- `removeJob`
+  - remove um job usando pelo id
+- `getJobs`
+  - retorna todos os jobs que ainda estão na fila
+- `removeAllJobs`
+  - remove todos os jobs da fila
+
+// objeto job
+const job = {
+ id: 1,
+ payload: {
+    filename: 'file1.txt',
+    body: 'exemplo de conteudo 1'
+ }
+}
+
+function myWorker(_job) {
+ return new Promise(resolve => {
+   // simulando algum processo demorado
+   setTimeout(() => {
+     console.log(new Date(), _job);
+     resolve();
+   }, 1000)
+ })
+}
