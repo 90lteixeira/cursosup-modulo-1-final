@@ -5,11 +5,11 @@ class Fila {
 	    this.jobs = [];
 	}
 
-    get getJobs() {
+	get getJobs() {
  		this._getJobs();
 	}
 
-    get removeAllJobs() {
+	get removeAllJobs() {
  		this._removeAllJobs();
 	}
 
