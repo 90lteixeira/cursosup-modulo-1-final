@@ -54,7 +54,7 @@ class Fila {
 		this.worker(job).then(() => {
 			this.jobs.shift();
 			if (this.jobs.lenght > 0) {
-				this.processaFila();
+				this.processaFila(job);
 			}
 		});
 	}
